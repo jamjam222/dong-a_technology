@@ -38,7 +38,7 @@ h2 {
 
 .inner {
     max-width: 1600px;
-    width: 100%;
+    width: calc(100% - 120px);
     height: 100%;
     margin: 0 auto;
 }
@@ -85,11 +85,16 @@ header {
 
 }
 
+header .inner {
+    max-width: 100%;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    margin: 0 auto;
 }
 
 .nav .logo {
@@ -153,8 +158,10 @@ header {
 
 #footer .box {
     width: 100%;
-    max-width: 1340px;
-    margin: 50px auto 0;
+    max-width: 1600px;
+    width: calc(100% - 120px);
+    padding-top: 50px;
+    margin: 0 auto;
 }
 
 #footer .box::after {

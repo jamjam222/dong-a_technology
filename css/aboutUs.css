@@ -2,36 +2,40 @@
 
 @import url('sub-page.css');
 
+/* content */
+main {
+    font-family: 'pretendard';
+}
 
-/*content*/
 .content .inner .subtitle h3 {
     font-weight: bold;
-    font-size: 48px;
-
+    font-size: 3rem;
 }
 
 .content .inner .subtitle span {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 200;
     font-family: 'outfit';
 }
 
 .content .inner .img-container {
     margin-top: 60px;
-    width: 1600px;
-    height: 515px;
     background-color: #ccc;
-    background: url('../img/첨단.png') center center / cover no-repeat;
+    width: 100%;
+    height: 515px;
+}
 
+.content .inner .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
-
-/*content-detail*/
-
+/* content-detail */
 .content .inner .content-detail {
     text-align: left;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 200;
     line-height: 35px;
     margin-top: 98px;
@@ -41,6 +45,5 @@
     margin: 80px 0 160px;
     text-align: left;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
-
