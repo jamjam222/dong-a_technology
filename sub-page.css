@@ -1,0 +1,179 @@
+@charset "utf-8";
+@import url('common.css');
+@import url('reset.css');
+
+
+a,
+a:hover {
+    transition: all 0.1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+header {
+    position: absolute;
+    font-family: 'pretendard';
+}
+
+footer {
+    font-family: 'pretendard';
+}
+
+.section0 {
+
+    width: 1920px;
+    width: 100%;
+    height: 596px;
+    background: url('../img/main-img.png') center center / cover no-repeat;
+
+}
+
+.section0 .inner {
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    /* 수직 정렬 */
+
+
+}
+
+.section0 .back_title {
+    position: absolute;
+    top: 175px;
+    left: 0;
+    font-size: 8rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: -1;
+    pointer-events: none;
+    opacity: .2;
+    font-family: 'Outfit';
+}
+
+.section0 .inner h2 {
+    color: #fff;
+    font-size: 6rem;
+    font-family: 'pretendard';
+    font-weight: 700;
+}
+
+.section0 .about-txt-box {
+    padding-left: 70px;
+}
+
+
+/*shortcut*/
+
+.shortcut {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    font-family: 'pretendard';
+}
+
+.shortcut .inner {
+    text-align: left;
+    align-items: center;
+    height: 62px;
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: left;
+    max-width: 1600px;
+    width: calc(100% - 120px);
+}
+
+.home-box {
+    padding-right: 22px;
+}
+
+.shortcut .p-box {
+    display: flex;
+    position: relative;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+
+.shortcut .inner .p-box:hover ul {
+    display: block;
+}
+
+
+.shortcut .inner .p-box ul {
+    display: none;
+    position: absolute;
+    top: 61px;
+    left: 0;
+    width: 170px;
+    padding: 15px 0 0 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    z-index: 999;
+}
+
+.shortcut .inner .p-box ul li {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+
+.shortcut .inner .p-box ul li a:hover {
+    color: #E30011;
+
+}
+
+.shortcut .p-box i {
+    padding-right: 22px;
+    font-size: 0.75rem;
+    height: 20px;
+    line-height: 20px;
+}
+
+.shortcut p {
+    position: relative;
+    padding-left: 22px;
+    padding-right: 48px;
+
+}
+
+.shortcut p::before {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 1px;
+    background: #e7e7e7;
+    content: '';
+    display: block;
+}
+
+/*content*/
+
+.content .inner {
+    text-align: center;
+}
+
+.content .inner .title {
+    margin-top: 70px;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 176px;
+    z-index: -1;
+}
+
+.content .inner .title::before {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    height: 50px;
+    width: 1px;
+    background: #ccc;
+    display: block;
+}
