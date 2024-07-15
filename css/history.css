@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+@import url('sub-page.css');
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+
+.content .content-detail{
+    width: 1060px;    
+    height: 3500px;    
+    margin: 0 auto;
+    margin-top: 60px;
+    
+}
+/*sec01*/
+.content .content-detail .sec01{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 226px;
+}
+
+.content .content-detail .sec01 h1{
+    font-weight: 700;
+    font-size: 110px;
+    font-family: 'GmarketSans';
+    width: 530px;    
+    text-align: left;
+}
+
+
+.content .content-detail .sec01 p{
+    padding-left: 145px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 300;
+    
+    width: 530px;
+}
+
+
+.content .content-detail .sec01 span{
+    margin-bottom: 30px;
+    font-family: 'GmarketSans';
+    font-size: 28px;
+    color: #e30011;
+    font-weight: 500;
+}
+
+
+/*sec02*/
+
+.content .content-detail .sec02{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 226px;    
+}
+
+.content .content-detail .sec02 h1{
+    font-weight: 700;
+    font-size: 110px;
+    font-family: 'GmarketSans';
+    width: 530px;
+    text-align: right;        
+}
+
+.content .content-detail .sec02 p{    
+    text-align: right;
+    font-size: 24px;
+    font-weight: 300;
+    width: 530px;
+    padding-right: 145px;    
+}
+
+
+.content .content-detail .sec02 span{
+    margin-bottom: 30px;
+    font-family: 'GmarketSans';
+    font-size: 28px;
+    color: #e30011;
+    font-weight: 500;
+}
+
+
+/*sec03*/
+
+.content .content-detail .sec03{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 226px;        
+}
+
+.content .content-detail .sec03 h1{
+    font-weight: 700;
+    font-size: 110px;
+    font-family: 'GmarketSans';
+    width: 530px;
+    text-align: left;
+}
+
+
+.content .content-detail .sec03 p{    
+    width: 530px;
+    padding-left: 145px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.content .content-detail .sec03 .p-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.content .content-detail .sec03 .p-box{
+    margin-bottom: 68px;
+}
+
+.content .content-detail .sec03 .p-box:last-child{
+    margin-bottom: 0;
+}
+
+.content .content-detail .sec03 span{
+    margin-bottom: 30px;
+    font-family: 'GmarketSans';
+    font-size: 28px;
+    color: #e30011;
+    font-weight: 500;
+}
+
+/*sec04*/
+.content .content-detail .sec04{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 226px;    
+    
+}
+
+.content .content-detail .sec04 h1{
+    font-weight: 700;
+    font-size: 110px;
+    font-family: 'GmarketSans';
+    width: 530px;
+    text-align: right;
+    
+}
+
+
+.content .content-detail .sec04 p{
+    text-align: right;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+    width: 530px;
+    padding-right: 145px;
+    
+}
+
+.content .content-detail .sec04 .p-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.content .content-detail .sec04 .p-box{
+    margin-bottom: 68px;
+}
+
+.content .content-detail .sec03 .p-box:last-child{
+    margin-bottom: 0;
+}
+
+.content .content-detail .sec04 span{
+    margin-bottom: 30px;
+    font-family: 'GmarketSans';
+    font-size: 28px;
+    color: #e30011;
+    font-weight: 500;
+}
