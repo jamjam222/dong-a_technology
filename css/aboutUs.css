@@ -36,7 +36,7 @@ main {
 .content .inner .content-detail {
     text-align: left;
     font-size: 1.25rem;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 35px;
     margin-top: 98px;
 }
@@ -46,18 +46,17 @@ main {
     text-align: left;
     font-weight: 600;
     font-size: 1.25rem;
+    position: relative;
 }
 
 .content .inner .ceo::before {
     content: "";
     display: block;
-    width: 100px;
-    /* 원하는 크기로 설정 */
-    height: 100px;
-    /* 원하는 크기로 설정 */
+    width: 127px;
+    height: 66px;
     background-image: url('../img/sign.png');
-    /* 여기에 이미지를 넣습니다 */
     background-size: cover;
-    margin-bottom: 10px;
-    /* 이미지와 텍스트 사이의 간격 조정 */
+    position: absolute;
+    top: -10px;
+    left: 5%;
 }
