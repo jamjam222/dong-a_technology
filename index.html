@@ -23,8 +23,7 @@
     <script>
         $(document).ready(function () {
             $('#fullpage').fullpage({
-                anchors: ['firstPage', 'secondPage', '3rdPage'],
-                
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
                 navigationPosition: 'left',
                 showActiveTooltip: true
             });
@@ -43,10 +42,25 @@
                 window.requestAnimationFrame(step);
             }
 
-            $('.value-number').each(function () {
-                const endValue = parseInt($(this).data('value'));
-                animateValue(this, 0, endValue, 2000);
+            const section4 = document.getElementById('section4');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $('.value-number').each(function () {
+                            const endValue = parseInt($(this).data('value'));
+                            animateValue(this, 0, endValue, 2000);
+                        });
+                        observer.unobserve(section4);
+                    }
+                });
             });
+
+            observer.observe(section4);
+
+            // $('.value-number').each(function () {
+            //     const endValue = parseInt($(this).data('value'));
+            //     animateValue(this, 0, endValue, 2000);
+            // });
         });
 
     </script>
@@ -60,7 +74,6 @@
             </a>
 
             <nav class="nav">
-
                 <ul class="depth1">
                     <li>
                         <a class="" href="./overview.html">
@@ -93,7 +106,6 @@
                                 </a>
                             </li>
                         </ul>
-
                     </li>
                     <li>
                         <a class="" href="#">
@@ -121,7 +133,6 @@
                                 </a>
                             </li>
                         </ul>
-
                     </li>
                     <li>
                         <a class="" href="#">
@@ -144,8 +155,8 @@
                                 </a>
                             </li>
                         </ul>
-
                     </li>
+
                     <li>
                         <a href="#" target="">
                             <span>인재경영</span>
@@ -163,14 +174,14 @@
                             </li>
                             <li>
                                 <a class="" href="#" class="">
-                                    <span>인재채용</span>
+                                    <span>채용전형</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
-
                 </ul>
             </nav>
+            
             <div class="right_cont">
                 <div class="menu-icon">
                     <div></div>
@@ -381,8 +392,5 @@
             </div>
         </footer><!-- #footer end -->
     </div>
-
 </body>
-
-
 </html>
