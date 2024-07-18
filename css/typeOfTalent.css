@@ -22,6 +22,7 @@ main {
 /* 이미지 배치 */
 .content_grid {
     position: relative;
+    margin: 0 5%;
 }
 
 .content_grid .img_title {
@@ -38,7 +39,7 @@ main {
 
 /* innovation */
 .innovation_box {
-    margin-top: 120px;
+    margin-top: 275px;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -46,15 +47,14 @@ main {
 }
 
 .innovation_box img {
-    width: 797px;
-    height: 717px;
+    width: 556px;
+    height: 507px;
     object-fit: cover;
 }
 
 .innovation_box .text {
-    width: 797px;
+    width: 556px;
 }
-
 
 /* flexibility */
 .flexibility_box {
@@ -64,35 +64,34 @@ main {
 }
 
 .flexibility_box img {
-    width: 520px;
-    height: 806px;
+    width: 379px;
+    height: 585px;
     object-fit: cover;
 }
 
 /* Trust */
 .trust_box {
-    margin-top: 145px;
+    margin-top: 400px;
     display: flex;
     flex-direction: column;
     align-items: end;
 }
 
 .trust_box img {
-    width: 645px;
-    height: 415px;
+    width: 617px;
+    height: 341px;
     object-fit: cover;
 }
 
 .trust_box .text {
-    width: 645px;
+    width: 617px;
 }
 
 /* Challenge */
-
 .challenge_box {
-    margin-top: 145px;
+    margin-top: 335px;
     margin-right: 80px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 }
 
 .challenge_box img {
