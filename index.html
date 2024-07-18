@@ -9,6 +9,7 @@
     <!-- 로컬 파일 -->
     <link rel="stylesheet" href="lib/jquery.fullpage.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,138 +20,98 @@
     <!-- FullPage.js 로드 -->
     <script src="lib/jquery.fullpage.min.js"></script>
 
-    <!-- FullPage.js 초기화 -->
-    <script>
-        $(document).ready(function () {
-            $('#fullpage').fullpage({
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
-                navigationPosition: 'left',
-                showActiveTooltip: true
-            });
-
-            // 숫자 애니메이션 스크립트 추가
-            function animateValue(element, start, end, duration) {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    element.innerHTML = Math.floor(progress * (end - start) + start);
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-                window.requestAnimationFrame(step);
-            }
-
-            const section4 = document.getElementById('section4');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        $('.value-number').each(function () {
-                            const endValue = parseInt($(this).data('value'));
-                            animateValue(this, 0, endValue, 2000);
-                        });
-                        observer.unobserve(section4);
-                    }
-                });
-            });
-
-            observer.observe(section4);
-
-            // $('.value-number').each(function () {
-            //     const endValue = parseInt($(this).data('value'));
-            //     animateValue(this, 0, endValue, 2000);
-            // });
-        });
-
-    </script>
+    <style>
+        .scrolled {
+            color: #000 !important;
+        }
+    </style>
 </head>
 
 <body>
     <div class="header">
         <div class="in">
-            <a href="/" class="logo">
-                <img src="img/logo_donga.svg" alt="">
+            <a href="/dong-a_technology" class="logo">
+                <img class="header_img" src="img/logo_donga.svg" alt="">
             </a>
 
             <nav class="nav">
                 <ul class="depth1">
                     <li>
-                        <a class="" href="./overview.html">
+                        <a href="./overview.html">
                             <span>회사소개</span>
                         </a>
                         <ul class="depth2">
                             <li>
-                                <a class="" href="/overview.html" class="">
+                                <a href="./overview.html">
                                     <span>회사개요</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="/aboutUs.html" class="">
+                                <a href="./aboutUs.html">
                                     <span>인사말</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="/history.html" class="">
+                                <a href="./history.html">
                                     <span>연혁</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="/vision.html" class="">
+                                <a href="./vision.html">
                                     <span>비전</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="/manner.html" class="">
+                                <a href="./manner.html">
                                     <span>윤리경영</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a href="#">
                             <span>제품</span>
                         </a>
                         <ul class="depth2">
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>제조공정</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>R&D</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>인증현황</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>고객지원</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="" href="#">
+                        <a href="#">
                             <span>홍보자료</span>
                         </a>
                         <ul class="depth2">
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>홍보자료</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>공지사항</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>뉴스</span>
                                 </a>
                             </li>
@@ -158,22 +119,22 @@
                     </li>
 
                     <li>
-                        <a href="#" target="">
+                        <a href="#">
                             <span>인재경영</span>
                         </a>
                         <ul class="depth2">
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>인재상</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>인사제도</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="#" class="">
+                                <a href="#">
                                     <span>채용전형</span>
                                 </a>
                             </li>
@@ -181,7 +142,7 @@
                     </li>
                 </ul>
             </nav>
-            
+
             <div class="right_cont">
                 <div class="menu-icon">
                     <div></div>
@@ -193,20 +154,85 @@
         <div class="gnb_bg"></div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var header = document.querySelector('.header');
+    <!-- 모달 -->
+    <div class="overlay"></div>
+    <div class="modal">
+        <div class="menu-modal-img"></div>
 
-            header.addEventListener('mouseover', function () {
-                header.classList.add('on');
-            });
+        <div class="modal-top">
+            <img src="img/logo_donga.svg" class="modal-image">
+            <span class="modal-close">&times;</span>
+        </div>
 
-            header.addEventListener('mouseout', function () {
-                header.classList.remove('on');
-            });
-        });
+        <div class="modal-content">
+            <div>
+                <div class="menu-title">회사소개</div>
 
-    </script>
+                <div>
+                    <div class="menu-item">
+                        <a href="./overview.html">회사개요</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="./aboutUs.html">인사말</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="./history.html">연혁</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="./vision.html">비전</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="./manner.html">윤리경영</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="menu-title">제품</div>
+
+                <div>
+                    <div class="menu-item">
+                        <a href="#">제조공정</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">R&D</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">인증현황</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="menu-title">고객지원</div>
+
+                <div>
+                    <div class="menu-item">
+                        <a href="#">공지사항</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">문의</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="menu-title">인재경영</div>
+
+                <div>
+                    <div class="menu-item">
+                        <a href="#">인재상</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">인사제도</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">인재채용</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="fullpage">
         <div class="section mainvisual" id="section0">
@@ -392,5 +418,89 @@
             </div>
         </footer><!-- #footer end -->
     </div>
+
+    <!-- FullPage.js 초기화 -->
+    <script>
+        $(document).ready(function () {
+            const header = document.querySelector('.header');
+            const headerFontColor = $('nav > .depth1');
+            const headerImage = $('.header > .in > a > img');
+
+            console.log(headerImage);
+            
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
+                navigationPosition: 'left',
+                showActiveTooltip: true,
+                afterLoad: function(origin, destination, direction){
+                    var scrollPosition = window.scrollY || window.pageYOffset;
+                    var windowHeight = window.innerHeight;
+
+                    if (destination == 1 || destination == 3 || destination == 5) {
+                        headerImage.attr('src', 'img/logo_donga.svg');
+                        headerFontColor.removeClass('scrolled');
+                    } else {
+                        headerImage.attr('src', 'img/logo_donga_black.svg');
+                        headerFontColor.addClass('scrolled');
+                    }
+                }
+            });
+
+            // 숫자 애니메이션 스크립트 추가
+            function animateValue(element, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    element.innerHTML = Math.floor(progress * (end - start) + start);
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+
+            const section4 = document.getElementById('section4');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $('.value-number').each(function () {
+                            const endValue = parseInt($(this).data('value'));
+                            animateValue(this, 0, endValue, 2000);
+                        });
+                        observer.unobserve(section4);
+                    }
+                });
+            });
+
+            observer.observe(section4);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var header = document.querySelector('.header');
+
+            header.addEventListener('mouseover', function () {
+                header.classList.add('on');
+            });
+
+            header.addEventListener('mouseout', function () {
+                header.classList.remove('on');
+            });
+        });
+
+        $(document).ready(function() {
+            // 모달 열기
+            $('.menu-icon').on('click', function() {
+                $('.overlay').fadeIn();
+                $('.modal').fadeIn();
+            });
+
+            // 모달 닫기
+            $('.modal-close, .overlay').on('click', function() {
+                $('.overlay').fadeOut();
+                $('.modal').fadeOut();
+            });
+        });
+    </script>
 </body>
 </html>
