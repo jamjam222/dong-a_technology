@@ -421,13 +421,13 @@
 
     <!-- FullPage.js 초기화 -->
     <script>
-        $(document).ready(function () {
-            const header = document.querySelector('.header');
-            const headerFontColor = $('nav > .depth1');
-            const headerImage = $('.header > .in > a > img');
+        let sectionDestination = 1;
+        const header = document.querySelector('.header');
+        const headerFontColor = $('nav > .depth1');
+        const headerImage = $('.header > .in > a > img');
+        const headerIcon = $('.menu-icon div');
 
-            console.log(headerImage);
-            
+        $(document).ready(function () {
             $('#fullpage').fullpage({
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
                 navigationPosition: 'left',
@@ -436,14 +436,29 @@
                     var scrollPosition = window.scrollY || window.pageYOffset;
                     var windowHeight = window.innerHeight;
 
+                    sectionDestination = destination;
+
                     if (destination == 1 || destination == 3 || destination == 5) {
                         headerImage.attr('src', 'img/logo_donga.svg');
                         headerFontColor.removeClass('scrolled');
+                        headerIcon.css('background-color', '#fff');
                     } else {
                         headerImage.attr('src', 'img/logo_donga_black.svg');
                         headerFontColor.addClass('scrolled');
+                        headerIcon.css('background-color', '#000');
                     }
                 }
+            });
+
+            // 모달
+            $('.menu-icon').on('click', function() {
+                $('.overlay').fadeIn();
+                $('.modal').fadeIn();
+            });
+
+            $('.modal-close, .overlay').on('click', function() {
+                $('.overlay').fadeOut();
+                $('.modal').fadeOut();
             });
 
             // 숫자 애니메이션 스크립트 추가
@@ -477,28 +492,30 @@
         });
 
         document.addEventListener('DOMContentLoaded', function () {
-            var header = document.querySelector('.header');
+            const header = document.querySelector('.header');
+            const headerFontColor = $('nav > .depth1');
 
             header.addEventListener('mouseover', function () {
                 header.classList.add('on');
+
+                console.log(sectionDestination);
+
+                if (sectionDestination != 1 && sectionDestination != 3 && sectionDestination != 5) {
+                    headerImage.attr('src', 'img/logo_donga.svg');
+                    headerFontColor.removeClass('scrolled');
+                    headerIcon.css('background-color', '#fff');
+                }
             });
 
             header.addEventListener('mouseout', function () {
                 header.classList.remove('on');
-            });
-        });
+                console.log('mouseout ::: ', sectionDestination);
 
-        $(document).ready(function() {
-            // 모달 열기
-            $('.menu-icon').on('click', function() {
-                $('.overlay').fadeIn();
-                $('.modal').fadeIn();
-            });
-
-            // 모달 닫기
-            $('.modal-close, .overlay').on('click', function() {
-                $('.overlay').fadeOut();
-                $('.modal').fadeOut();
+                if (sectionDestination != 1 && sectionDestination != 3 && sectionDestination != 5) {
+                    headerImage.attr('src', 'img/logo_donga_black.svg');
+                    headerFontColor.addClass('scrolled');
+                    headerIcon.css('background-color', '#000');
+                }
             });
         });
     </script>
