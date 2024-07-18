@@ -59,6 +59,20 @@
     z-index: 1;
 }
 
+.content .content-detail::before.active {
+    background: #E30011;
+    height: auto;
+}
+
+.content .content-detail .sec.active::before {
+    /* background: #E30011;
+    box-shadow: 0 0 0px 8px rgba(227, 0, 17, 0.3); */
+}
+
+.content .content-detail .sec.active p::before {
+    background: #E30011;
+    box-shadow: 0 0 0px 8px rgba(227, 0, 17, 0.3);
+}
 
 /*sec01*/
 .content .content-detail .sec{

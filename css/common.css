@@ -114,6 +114,12 @@ h2 {
     transition: background-color .3s, transform .3s;
 }
 
+.header .header_img {
+    width: 230px;
+    height: 81px;
+    object-fit: contain;
+}
+
 .header.down {
     transform: translateY(-103%) !important;
 }
