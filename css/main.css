@@ -548,7 +548,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 0 20px 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1001;
@@ -557,6 +556,7 @@
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(12px);
+    padding: 0 max(20px, 3vw);
 }
 
 .modal .modal-top {
@@ -572,16 +572,15 @@
 }
 
 .modal .modal-image {
-    width: 160px;
-    height: 56px;
+    width: 230px;
+    height: 81px;
     object-fit: contain;
 }
 
 .modal-close {
     cursor: pointer;
-    font-size: 38px;
+    font-size: 40px;
     color: #fff;
-    padding-right: 10px;
 }
 
 .modal .menu-title {
